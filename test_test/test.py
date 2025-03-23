@@ -106,11 +106,4 @@ try:
     mycursor.execute("DROP DATABASE IF EXISTS test_db")
     print("数据库删除成功")
 
-except mysql.connector.Error as err:
-    print(f"发生错误: {err}")
-finally:
-    if mydb.is_connected():
-        mycursor.close()
-        mydb.close()
-        print("数据库连接已关闭")
 
